@@ -1,0 +1,467 @@
+*{
+    box-sizing: border-box;
+}
+
+.task-page{
+    width:100%;
+}
+/* <<<=================================/Task Page Header/============================>>> */
+.task-page-header{
+    width:100%;
+    height:100vh;
+    background-color: #0f7bd3;
+    background-image: url("../../Assests/images/TaskPageHeader.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.task-page-header.dark{
+    background-color: #0f7bd3;
+}
+.task-page-navbar{
+    width:100%;
+    height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-page-header .header-contnent > h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 0 0 2px #333;
+    transition: all .3s;
+}
+.task-page-header.dark .header-contnent >h1{
+    color: #203844;
+    text-shadow: 0 0 2px #fff;
+}
+/* <<<=================================/Task page Content/===========================>>> */
+.task-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2rem;
+    padding-block: 5rem;
+    box-shadow: 0 -5px 5px #ebf0e8;
+    background-color: #e8ece5;
+    transition: all .3s;
+}
+.task-container.dark{
+    background-color: #26333e;
+    box-shadow: 0 -5px 5px #26333e;
+}
+.task-container > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.task-container .task-card{
+    width:500px;
+    min-height: 300px;
+    background-color: #26333e;
+    border-radius: .5rem;
+    margin-block: 3rem;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all .3s;
+}
+.task-container .task-card.dark{
+    background-color: #e8ece5;
+}
+.task-container .task-card:hover{
+    box-shadow: 0 0 5px #26333e;
+}
+.task-card .task-card-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.task-card .task-card-header .task-card-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: .5rem;
+}
+.task-card .task-card-header .task-card-title>h1{
+    font:20px 600;
+    color: #e8ece5;
+}
+.task-container .task-card.dark .task-card-title>h1{
+    color: #26333e;
+}
+.task-card .task-card-header .task-card-dates{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: .5rem;
+}
+.task-card .task-card-header .task-card-dates .create-date{
+    font-size: 25px;
+    color: #e8ece5;
+    text-align:start;
+}
+.task-card.dark .task-card-header .task-card-dates .create-date{
+    font-size: 25px;
+    color: #26333e;
+    text-align:start;
+}
+.task-card .task-card-header .task-card-dates .deadline{
+    font-size: 25px;
+    color: #0f7bd3;
+    text-align:end;
+}
+.task-card.dark .task-card-header .task-card-dates .deadline{
+    font-size: 25px;
+    color: #910404;
+    text-align:end;
+}
+
+.task-card .task-card-discription{
+    width:100%;
+    padding-block: .5rem;
+    font-size: 20px;
+    color: #fff;
+}
+.task-card .task-card-discription>article{
+    width:100%;
+    height:auto;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    line-break: auto;
+}
+
+.task-card.dark .task-card-discription{
+    padding-block: .5rem;
+    font-size: 20px;
+    color: #333;
+}
+
+
+
+.task-card .task-card-footer{
+    width: 100%;
+    padding-block: 1rem;
+    justify-self: flex-end;
+}
+.task-card .task-card-footer>button{
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    font-size: 15px;
+    font-weight:800 ;
+    border-radius: .5rem;
+    border:none;
+    box-shadow: 0 0 5px #333;
+    transition: all .3s;
+    cursor: pointer;
+}
+.task-card-footer .change-deadline{
+    margin-left: 2rem;
+    background-color:  #0f7bd383;
+    color: #fff;
+}
+.task-card-footer .change-deadline:hover{
+    background-color:  #0f7bd3;
+}
+.task-card.dark .change-deadline{
+    background-color: #9104048c;
+}
+.task-card.dark .change-deadline:hover{
+    background-color: #910404;
+}
+/* <========================================================> */
+.task-card .task-card-footer .task-completed{
+    background-color:  #ebf0e8ab;
+    color: #333;
+}
+.task-card .task-card-footer .task-completed:hover{
+    background-color: #e8ece5;
+}
+.task-card.dark .task-card-footer .task-completed{
+    background-color:  #26333ead;
+    color: #fff;
+}
+.task-card.dark .task-card-footer .task-completed:hover{
+    background-color:  #26333e;
+}
+
+@media (width < 500px) {
+    .task-container .task-card{
+        width: 100%;
+    }
+    .task-card .task-card-footer{
+        width: 100%;
+        padding-block: 1rem;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .task-card-footer .change-deadline{
+        margin-left: 0px;
+        margin-top: 1rem;
+    }
+
+    
+}
+.Deadline-popup{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Deadline-popup .exit-deadline-popup{
+    background-color: #ffffff00;
+    border:none;
+    transform: translateY(-200px);
+    border-radius: 50%;
+    transition: all .3s;
+    padding: .3rem;
+}
+.Deadline-popup .exit-deadline-popup:hover{
+    background-color: #ffffffc2;
+}
+.Deadline-popup .exit-deadline-popup>svg{
+    width: 50px;
+    height: 50px;
+}
+.Deadline-popup .DeadLine-overlay{
+    width:100%;
+    height:100%;
+    background-color: #26333e65;
+    z-index: -1;
+    position: absolute;
+}
+.Deadline-popup >form{
+    width:400px;
+    height:350px;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding:1rem;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px #333;
+}
+.Deadline-popup >form>label{
+    font-size: 20px;
+    font-weight: 400;
+    color: #26333e;
+}
+.Deadline-popup >form>input{
+    margin-top: 1rem;
+    padding-inline: 1.5rem;
+    padding-block: .5rem;
+    border-radius: .5rem;
+    border:solid #26333e;
+}
+.Deadline-popup >form>button{
+    width:80%;
+    background-color: #26333e80;
+    border-radius: .5rem;
+    padding-block: .5rem;
+    padding-inline: 1.5rem;
+    border:none;
+    box-shadow: 0 0 5px #333;
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all .3s;
+}
+.Deadline-popup >form>button:hover{
+    background-color: #26333e;
+}
+@media (width < 500px) {
+    .Deadline-popup >form{
+        width:300px;
+        height:250px;
+    }
+    .Deadline-popup .exit-deadline-popup{
+        transform: translateX(-150px);
+    }
+    .Deadline-popup{
+        flex-direction: column;
+    }
+}
+/* <<<==============================/no tasks yet/==============================>>> */
+.task-container .no-task-yet{
+    width:100%;
+    height:200px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task-container .no-task-yet>h1{
+    font-size: 30px;
+    color: #333;
+}
+.no-task-yet.dark>h1{
+    color : #fff
+}
+
+
+/* <<<==============================/add task page/==============================>>> */
+.add-task{
+    width:100%;
+    height:100vh;
+    background-color: #0f7bd3;
+    background-image: url("../../Assests/images/createtask.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.add-task.dark{
+    background-color: #0f7bd3;
+}
+
+.add-task .header-contnent > h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 0 0 2px #333;
+    transition: all .3s;
+}
+.add-task.dark .header-contnent >h1{
+    color: #203844;
+    text-shadow: 0 0 2px #fff;
+}
+.add-task{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#333;
+    transition: all .3s;
+}
+.add-task.dark{
+    background-color: #fff;
+}
+.add-task .form{
+    width:550px;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color:#f4f4f4;
+    box-shadow: 0 0 5px #f4f4f4;
+    transition: all .3s;
+}
+.add-task.dark .form{
+    width:550px;
+    border-radius: 1rem;
+    background-color: #203844;
+    box-shadow: 0 0 5px #203844;
+    padding: 1rem;
+}
+
+.add-task .form .form-item{
+    width:100%;
+    padding-left: .5rem;
+}
+.add-task .form .form-item label{
+    width: 100%;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    padding:.5rem;
+}
+.add-task.dark .form .form-item label{
+    width: 100%;
+    font-size: 20px;
+    color: #f4f4f4;
+    font-weight: 500;
+    padding:.5rem;
+}
+.add-task .form .form-item input{
+    border-radius: 1rem;
+    padding:.5rem;
+    width: 100%;
+}
+.add-task .form .form-item textarea{
+    border-radius: 1rem;
+    padding:.5rem;
+    width: 100%;
+}
+.add-task .form .form-item span{
+    font-size: 15px;
+    color: #910404;
+    width: 100%;
+}
+.add-task.dark .form .form-item span{
+    color: #0f7bd3;
+}
+.add-task .form .form-submit-btn{
+    background-color: #0f7bd385;
+    border: none;
+    font-size: 20px;
+    color: #f4f4f4;
+    font-weight: 500;
+    transition: all.2s;
+}
+.add-task .form .form-submit-btn:hover{
+    background-color: #0f7bd3;
+}
+
+@media (width < 500px) {
+    .add-task .form{
+        width:100%;
+    }
+}
+
+
+
+
+/* <=============================/completed tasks/==================================> */
+.completed-task{
+    width:100%;
+    height:100vh;
+    background-color: #0f7bd3;
+    background-image: url("../../Assests/images/completedyasks.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.completed-task.dark{
+    background-color: #0f7bd3;
+}
+
+.completed-task .header-contnent > h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 0 0 2px #333;
+    transition: all .3s;
+}
+.completed-task.dark .header-contnent >h1{
+    color: #203844;
+    text-shadow: 0 0 2px #fff;
+}

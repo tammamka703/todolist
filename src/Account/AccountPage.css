@@ -1,0 +1,79 @@
+.account{
+    padding-block: 5rem;
+    background-image: url("../Assests/images/createtask.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.account-container {
+    background-color: #e8ece5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 700px;
+  }
+  
+  h1 {
+    color: #26333e;
+  }
+  
+  .account-details {
+    margin-top: 20px;
+  }
+  
+  .detail-item {
+    background-color: #0f7bd3;
+    color: #e8ece5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem;
+  }
+  .detail-item>.profile-img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    box-shadow: 0 0 5px #333;
+
+  }
+  .detail-item>.profile-img>img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .detail-item .profile-details {
+    margin-left:2rem;
+  }
+
+  .detail-item .user-achivements{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .detail-item .user-achivements>ul{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+    transform: translateY(100px);
+  }
+  .detail-item .user-achivements>ul>li .achivement-card{
+    width:150px;
+    height:150px;
+    background-color: #e8ece5;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #333;
+  }
+  
